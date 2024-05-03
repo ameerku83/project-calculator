@@ -7,22 +7,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="cal.css">
     <script src="cal.js"></script>
+
 </head>
 
 <body>
+    <label id="dark-change"></label>
     <div class="main-body">
+        <h1 style="text-align: center;">Calculator</h1>
         <div class="calc">
             <div class="output">
-                <input type="text" id="screen" name="" id=" ">
+                <input type="text" id="screen" name="">
 
 
 
 
             </div>
             <div class="buttons">
+                <div class="row" >
+                    <button onclick="square()" class="btn">x<sup style="font-size: 15px;">2</sup></button>
+                    <button onclick="root()" class="btn" > <strong>√</strong></button>
+                    <button onclick="deleteValue()" class="btn">DE</button> 
                 <button onclick="clearDisplay()" class="btn">C</button>
+                
+
+                </div>
+                
                 <div class="row">
-                    <button onclick="buttonclick(7)" class="btn">7</button>
+                    <button onclick="buttonclick(7)" class="btn"  onkeydown="myFunction(event)" >7</button>
                     <button onclick="buttonclick(8)" class="btn">8</button>
                     <button onclick="buttonclick(9)" class="btn">9</button>
                     <button onclick="buttonclick('/')" class="btn">/</button>
@@ -47,7 +58,8 @@
                     <button onclick="buttonclick('.')" class="btn">.</button>
                     <button onclick="buttonclick(0)" class="btn">0</button>
                     <button onclick="buttonclick('+')" class="btn">+</button>
-                    <button onclick="equalClick('=')" class="btn">=</button>
+                    <button onclick="equalClick('=')"   class="btn" >=</button>
+                  
                 </div>
 
 
@@ -57,7 +69,27 @@
         </div>
 
     </div>
-
+    
+    <!-- <select style="width: 550px; margin-bottom: 0;">
+     
+     <option value="c">rfg</option>
+     <option value="d">grevcv</option>
+     <option value="e">gfg</option>
+    </select> -->
+          <!-- <h1 id="count">0</h1>
+          <button onclick="onch(+1) " onkeydown="myFunction(event)" >+</button>
+          <button onclick="onch(-1)" onkeydown="myFunction(event)"  >-</button>
+          <button onclick="reset()">reset</button> -->
+ 
+<script>
+  var content = document.getElementsByTagName("body")[0]
+  var darkmode=document.getElementById("dark-change")
+  darkmode.addEventListener("click",function(){
+  darkmode.classList.toggle("active");
+  content.classList.toggle("night")
+}
+)
+</script>
 </body>
 
 </html>
